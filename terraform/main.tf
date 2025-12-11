@@ -8,7 +8,7 @@ resource "kubernetes_deployment" "myapp" {
 
     labels = {
 
-      app = "myapp"
+      app = "myapp2"
 
     }
 
@@ -24,7 +24,7 @@ resource "kubernetes_deployment" "myapp" {
 
       match_labels = {
 
-        app = "myapp"
+        app = "myapp2"
 
       }
 
@@ -38,7 +38,7 @@ resource "kubernetes_deployment" "myapp" {
 
         labels = {
 
-          app = "myapp"
+          app = "myapp2"
 
         }
 
@@ -50,7 +50,7 @@ resource "kubernetes_deployment" "myapp" {
 
         container {
 
-          name  = "myapp"
+          name  = "myapp2"
 
           image = "${var.image_registry}/${var.image_name}:${var.image_tag}"
 
@@ -74,7 +74,7 @@ resource "kubernetes_deployment" "myapp" {
 
  
 
-resource "kubernetes_service" "myapp" {
+resource "kubernetes_service" "myapp2" {
 
   metadata {
 
@@ -84,7 +84,7 @@ resource "kubernetes_service" "myapp" {
 
     labels = {
 
-      app = "myapp"
+      app = "myapp2"
 
     }
 
@@ -100,7 +100,7 @@ resource "kubernetes_service" "myapp" {
 
     selector = {
 
-      app = "myapp"
+      app = "myapp2"
 
     }
 
@@ -117,5 +117,6 @@ resource "kubernetes_service" "myapp" {
     }
 
   }
+
 
 }
