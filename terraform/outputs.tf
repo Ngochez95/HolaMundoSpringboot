@@ -1,6 +1,6 @@
 output "service_nodeport" {
 
-  value = kubernetes_service.myapp.spec[0].port[0].node_port
+  value = kubernetes_service.myapp2.spec[0].port[0].node_port
 
 }
 
@@ -8,6 +8,7 @@ output "service_nodeport" {
 
 output "deployment_name" {
 
-  value = kubernetes_deployment.myapp.metadata[0].name
+  value = kubernetes_deployment.myapp2.metadata[0].name
+
 
 }
