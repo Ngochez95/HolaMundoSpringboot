@@ -1,4 +1,4 @@
-resource "kubernetes_deployment" "myapp" {
+resource "kubernetes_deployment" "myapp2" {
 
   metadata {
 
@@ -120,3 +120,4 @@ resource "kubernetes_service" "myapp2" {
 
 
 }
+
