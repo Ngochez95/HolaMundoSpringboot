@@ -1,0 +1,15 @@
+namespace: default
+
+deploymentName: myapp3-deploy
+serviceName: myapp3-svc
+
+image:
+  registry: docker.io
+  repository: ngochez95/myapp
+  tag: "latest"
+
+ports:
+  containerPort: 8080
+  nodePort: 30082
+
+replicas: 1
